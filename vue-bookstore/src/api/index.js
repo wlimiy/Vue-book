@@ -4,3 +4,6 @@ import axios from 'axios';
 export function getSliders() {
   return axios.get('/api/slider');//返回的是promise对象
 }
+export function getHot() {
+  return axios.get('/api/hot');
+}
