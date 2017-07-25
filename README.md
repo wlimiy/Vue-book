@@ -26,16 +26,21 @@ Runtime-only(不支持template写法)
 ### 安装其他项目依赖
  sudo npm install bootstrap vue-resource --save
 
-###新建组件
+### 新建组件
  List.vue
  Detail.vue
  Add.vue
  Navbar.vue
-###配置路由
+### 配置路由
 ```
 {
   path: '/list',
   component: List
 }
 ```
-###安装express写服务
+### 写后台服务
+mock>server.js
+### 前端调后端接口用axios：帮助我们从后端获取数据
+>安装axioc:sudo npm install axios --save
+### 轮播图效果需要安装swiper
+>sudo npm install swiper --save
