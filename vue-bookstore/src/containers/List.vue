@@ -8,6 +8,7 @@
             <div>
               <h3>{{book.bookName}}</h3>
               <p>{{book.content}}</p>
+              <button @click="remove(book.id)">删除</button>
             </div>
           </li>
         </ul>
@@ -17,7 +18,7 @@
 
 <script>
   import MHeader from '../components/MHeader.vue';
-  import {getBook} from '@/api';
+  import {getBook,removeBook} from '@/api';
     export default {
         data(){
             return {books:[]}
@@ -43,6 +44,15 @@
             }).catch(err=>{
               console.log(err);
             });
+          },
+          remove(id){
+              removeBook(id).then(res=>{
+                  this.books=this.books.filter(item=>
+                      item.id!=id
+                  )
+              }).catch(err=>{
+                  console.log(err);
+              })
           }
         }
     }
@@ -83,5 +93,11 @@
   @keyframes fadeIn {
     from{opacity: 0}
     to{opacity: 1}
+  }
+  button{
+    background:gainsboro;
+    border: none;
+    height: 40px;
+    width: 60px;
   }
 </style>

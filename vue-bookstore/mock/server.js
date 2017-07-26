@@ -19,6 +19,7 @@ function write(data,callback) {
 console.log(sliders);
 http.createServer(function (req,res) {
   let {pathname,query}=url.parse(req.url,true);
+  let id=query.id;//如果传递id,将id保留下来 /api/book?id=1
   if(pathname==='/api/slider'){
     return res.end(JSON.stringify(sliders))
   }
@@ -56,9 +57,17 @@ http.createServer(function (req,res) {
           })
         });
         break;
-      case 'delete':
+      case 'DELETE':
+        read(function (books) {
+          books=books.filter(item=>
+            id!=item.id
+          );
+          write(books,function () {
+            res.end(JSON.stringify({}));
+          });
+        });
         break;
-      case 'put':
+      case 'PUT':
         break;
 
     }
