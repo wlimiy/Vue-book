@@ -6,7 +6,9 @@ import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/index.css';
 import VueLazyLoad from 'vue-lazyload'
+import VueScroller from 'vue-scroller'
 Vue.use(VueLazyLoad);
+Vue.use(VueScroller);
 new Vue({
   el: '#app',
   router,
