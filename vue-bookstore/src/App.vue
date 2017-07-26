@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <!--<img src="./assets/logo.png">-->
+
+    <!--保持缓存页面-->
+    <div class="content">
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+    </div>
     <Tab></Tab>
-    <router-view></router-view>
     <!--<div class="container">-->
       <!--<div class="row">-->
         <!--<div class="col-md-12">-->
@@ -14,7 +20,7 @@
 </template>
 
 <script>
-import Tab from '@/components/Tab'
+import Tab from '@/components/Tab';
 //import Hello from '@/components/Hello'
 export default {
 //  name: 'app'
@@ -26,12 +32,7 @@ export default {
 </script>
 
 <style>
-/*#app {*/
-  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
-  /*text-align: center;*/
-  /*color: #2c3e50;*/
-  /*margin-top: 60px;*/
-/*}*/
+.content{
+  margin-bottom: 80px;
+}
 </style>

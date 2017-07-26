@@ -40,6 +40,7 @@
     height: 60px;
     border-top: 1px solid #ccc;
     align-items: center;
+    background: #ffffff;
   }
   nav a{
     display: flex;

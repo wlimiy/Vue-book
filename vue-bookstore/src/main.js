@@ -5,12 +5,11 @@ import App from './App'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/index.css';
-Vue.config.productionTip = false
-
-/* eslint-disable no-new */
+import VueLazyLoad from 'vue-lazyload'
+Vue.use(VueLazyLoad);
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
   components: { App }
-})
+});

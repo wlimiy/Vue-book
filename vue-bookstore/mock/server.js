@@ -26,4 +26,21 @@ http.createServer(function (req,res) {
     });
     return
   }
+  //图书的增删改查
+  if(pathname==='/api/book'){
+    switch (req.method){
+      case 'GET':
+        read(function (data) {//data代表所有数据
+          res.end(JSON.stringify(data));
+        });
+        break;
+      case 'post':
+        break;
+      case 'delete':
+        break;
+      case 'put':
+        break;
+
+    }
+  }
 }).listen(3000);
