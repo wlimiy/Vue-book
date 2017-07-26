@@ -44,3 +44,15 @@ mock>server.js
 >安装axioc:sudo npm install axios --save
 ### 轮播图效果需要安装swiper
 >sudo npm install swiper --save
+### 图片懒加载:vue-lazyload
+>sudo npm install vue-lazyload
+### 滚动加载:vue-scroller
+>sudo npm install vue-scroller --save
+
+### 页面效果图
+![home](https://github.com/wlimiy/Vue-book/blob/master/vue-bookstore/src/assets/home.png)
+
+![list](https://github.com/wlimiy/Vue-book/blob/master/vue-bookstore/src/assets/list.png)
+
+![add](https://github.com/wlimiy/Vue-book/blob/master/vue-bookstore/src/assets/add.png)
+
